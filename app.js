@@ -12,6 +12,7 @@
 /*-------------------------------- Constants --------------------------------*/
 
 const numbers = document.querySelectorAll(".number");
+console.log(numbers);
 
 const operators = document.querySelectorAll(".operator");
 
@@ -37,6 +38,7 @@ let clear = "";
 numbers.forEach((item) => {
   item.addEventListener("click", (eventWhenClicked) => {
     const value = eventWhenClicked.target.innerText;
+   console.log(value);
     if (oper === "") {
       num1 += value;
       display.innerText = num1;
@@ -46,6 +48,8 @@ numbers.forEach((item) => {
     }
   });
 });
+
+
 
 operators.forEach((item) => {
   item.addEventListener("click", (eventWhenClicked) => {
@@ -99,3 +103,5 @@ function operate() {
 
   display.innerText = result;
 }
+
+console.log(operate);
